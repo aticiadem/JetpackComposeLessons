@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.adematici.compose.R
-import com.adematici.compose.model.SampleData
+import com.adematici.compose.model.SampleDataGrid
 import com.adematici.compose.ui.theme.Purple200
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -36,8 +36,8 @@ fun SampleGrid(navController: NavController) {
     val context = LocalContext.current
     val dataFileString = getJsonDataFromAsset(context, "SampleData.json")
     val gson = Gson()
-    val gridSampleType = object : TypeToken<List<SampleData>>() {}.type
-    val sampleData: List<SampleData> = gson.fromJson(dataFileString, gridSampleType)
+    val gridSampleType = object : TypeToken<List<SampleDataGrid>>() {}.type
+    val sampleData: List<SampleDataGrid> = gson.fromJson(dataFileString, gridSampleType)
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -72,7 +72,7 @@ fun SampleGrid(navController: NavController) {
 }
 
 @Composable
-fun SampleDataGridItem(data: SampleData, navController: NavController) {
+fun SampleDataGridItem(data: SampleDataGrid, navController: NavController) {
     Card(
         modifier = Modifier
             .clickable {

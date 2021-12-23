@@ -15,11 +15,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.adematici.compose.R
-import com.adematici.compose.model.SampleData
+import com.adematici.compose.model.SampleDataGrid
 import com.adematici.compose.ui.theme.Purple500
 
 @Composable
-fun SampleGridDetail(data: SampleData) {
+fun SampleGridDetail(data: SampleDataGrid) {
     Column(
         modifier = Modifier
             .fillMaxWidth(),
